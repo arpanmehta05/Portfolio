@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You for Contacting Me</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+      .header {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 25px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+      .body {
+        padding: 30px;
+        line-height: 1.6;
+        font-size: 16px;
+      }
+      .greeting {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #000000;
+      }
+      .main-message {
+        margin-bottom: 25px;
+        color: #000000;
+        line-height: 1.7;
+      }
+      .section {
+        margin-bottom: 25px;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        background-color: #fafafa;
+      }
+      .section h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+        border-bottom: 2px solid #000000;
+        padding-bottom: 8px;
+      }
+      .response-timeline {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 20px;
+        border-radius: 6px;
+        text-align: center;
+        margin: 25px 0;
+      }
+      .response-timeline h3 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        color: #ffffff;
+        border: none;
+        padding: 0;
+      }
+      .response-timeline p {
+        margin: 0;
+        font-size: 16px;
+      }
+      .message-summary {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        padding: 15px;
+      }
+      .summary-item {
+        margin-bottom: 15px;
+        color: #000000;
+      }
+      .summary-label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #000000;
+      }
+      .summary-value {
+        color: #000000;
+        font-size: 16px;
+      }
+      .message-box {
+        background-color: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        padding: 15px;
+        margin-top: 10px;
+        color: #000000;
+        line-height: 1.6;
+        font-family: Georgia, serif;
+        font-style: italic;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+      .contact-item {
+        padding: 10px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+      }
+      .contact-label {
+        font-weight: bold;
+        color: #000000;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+      .contact-value {
+        color: #000000;
+        font-size: 16px;
+      }
+      .closing-message {
+        margin: 25px 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-radius: 6px;
+        color: #000000;
+        line-height: 1.7;
+        text-align: center;
+      }
+      .footer {
+        background-color: #f5f5f5;
+        color: #777777;
+        text-align: center;
+        padding: 20px;
+        font-size: 12px;
+        border-top: 1px solid #e0e0e0;
+      }
+      .signature {
+        color: #000000;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        .body {
+          padding: 20px;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .section {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        Thank You for Contacting Me
+      </div>
+      <div class="body">
+        <div class="greeting">Hello {{USER_NAME}},</div>
+
+        <div class="main-message">
+          Thank you for reaching out through my portfolio website. I genuinely
+          appreciate you taking the time to contact me, and I'm excited about
+          the opportunity to connect with you.
+        </div>
+
+        <div class="response-timeline">
+          <h3>Response Timeline</h3>
+          <p>
+            I will personally review your message and respond within 24-48 hours
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Your Message Summary</h3>
+          <div class="message-summary">
+            <div class="summary-item">
+              <span class="summary-label">Subject:</span>
+              <span class="summary-value">{{USER_SUBJECT}}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Your Message:</span>
+              <div class="message-box">{{USER_MESSAGE}}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="closing-message">
+          I'm looking forward to learning more about your project and discussing
+          how my skills in full-stack development can help bring your ideas to
+          life. Thank you again for your interest in working together.
+        </div>
+
+        <div class="section">
+          <h3>My Contact Information</h3>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <span class="contact-label">Name:</span>
+              <span class="contact-value">Arpan Mehta</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Role:</span>
+              <span class="contact-value">Full-Stack Developer</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Email:</span>
+              <span class="contact-value">arpanmehta05@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone:</span>
+              <span class="contact-value">+91 9896897266</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn:</span>
+              <span class="contact-value"
+                >linkedin.com/in/arpan-mehta-ba113228b</span
+              >
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">GitHub:</span>
+              <span class="contact-value">github.com/arpanmehta05</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="signature">
+          Best regards, Arpan Mehta - Full-Stack Developer
+        </div>
+        This is an automated confirmation email. Please do not reply directly to
+        this email.
+        <br /><br />
+        © {{CURRENT_YEAR}} Arpan Mehta. All rights reserved.
+      </div>
+    </div>
+  </body>
+</html>
