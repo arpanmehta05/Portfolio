@@ -40,16 +40,16 @@ export default function Contact() {
       }
 
       // Send to backend API
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/contact`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const endpoint = `${apiUrl.replace(/\/$/, "")}/api/contact`;
+
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       const result = await response.json();
 
@@ -266,7 +266,7 @@ export default function Contact() {
                   placeholder="Tell me about your project or opportunity..."
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 disabled={isSubmitting}
