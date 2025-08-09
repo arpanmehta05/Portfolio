@@ -50,7 +50,7 @@ export default function Navbar() {
 
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/arpan-resume.pdf";
+    link.href = "/Arpan_Resume.pdf";
     link.download = "Arpan_Mehta_Resume.pdf";
     document.body.appendChild(link);
     link.click();
