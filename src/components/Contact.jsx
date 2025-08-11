@@ -163,7 +163,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/arpan-mehta-ba113228b"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors duration-200"
+                  className="px-4 py-2 bg-black border-2 border-black text-white rounded-lg hover:bg-white hover:text-black transition-colors duration-200"
                 >
                   LinkedIn
                 </a>
@@ -179,7 +179,7 @@ export default function Contact() {
                   href="https://leetcode.com/u/arpanmehta05/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors duration-200"
+                  className="px-4 py-2 bg-black border-2 border-black text-white rounded-lg hover:bg-white hover:text-black transition-colors duration-200"
                 >
                   LeetCode
                 </a>
@@ -270,10 +270,10 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full px-8 py-4 font-semibold rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 ${
+                className={`w-full px-8 py-4 font-semibold rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 border-2 ${
                   isSubmitting
-                    ? "bg-gray-400 text-white cursor-not-allowed"
-                    : "bg-black text-white hover:bg-gray-800"
+                    ? "bg-gray-400 text-white cursor-not-allowed border-gray-400"
+                    : "bg-black text-white border-black hover:bg-white hover:text-black hover:border-black"
                 }`}
               >
                 {isSubmitting ? (
