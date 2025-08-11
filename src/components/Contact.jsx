@@ -179,7 +179,7 @@ export default function Contact() {
                   href="https://leetcode.com/u/arpanmehta05/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors duration-200"
+                  className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors duration-200"
                 >
                   LeetCode
                 </a>

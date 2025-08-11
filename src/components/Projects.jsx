@@ -14,8 +14,7 @@ export default function Projects() {
         "ELO rating system and matchmaking",
         "Game analysis and PGN/FEN notation support",
       ],
-      githubLink: "https://github.com/arpanmehta05/aichess",
-      liveLink: "https://aichess.com",
+      githubLink: "https://github.com/AAAAD-CHESS-APP",
     },
     {
       title: "Study Notion",
@@ -28,8 +27,7 @@ export default function Projects() {
         "Instructor dashboard with analytics",
         "Automated email notifications",
       ],
-      githubLink: "https://github.com/arpanmehta05/study-notion",
-      liveLink: "https://studynotion.com",
+      githubLink: "https://github.com/arpanmehta05/Study-Notion.git",
     },
   ];
 
